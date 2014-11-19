@@ -8,16 +8,24 @@
         </tr>
 
     </thead>
-    <tbody>
-        <?php foreach ($tarefas as $tarefa): ?>
-            <tr data-tarefa-id="<?php echo $tarefa['task_id'] ?>">
-               <td><?php echo $tarefa['titulo'] ?></td> 
-               <td><button class="button-excluir" data-tarefa-id="<?php echo $tarefa['task_id'] ?>">Excluir</button></td>
-            </tr>
-        <?php endforeach ?>
+    <tbody class='lista-tarefas'>
+        <tr data-id="id" class='tarefa'>
+           <td>Título da Tarefa</td> 
+           <td><button class="button-excluir" data-id="id">Excluir</button></td>
+        </tr>
+        <tr data-id="id" class='tarefa'>
+           <td>Título da Tarefa</td> 
+           <td><button class="button-excluir" data-id="id">Excluir</button></td>
+        </tr>
+        <tr data-id="id" class='tarefa'>
+           <td>Título da Tarefa</td> 
+           <td><button class="button-excluir" data-id="id">Excluir</button></td>
+        </tr>
     </tbody>
 </table>
-<div class="error"></div>
-
-<input type='text' placeholder='tarefa' id='add-tarefa' /><button class='button-add'>Adicionar</button>
+<div class="error" style="display:none;"></div>
+<form action="" id="tarefaForm">
+    <input type='text' placeholder='tarefa' name='titulo' id='add-tarefa' /><button class='button-add'>Adicionar</button>
+    <input type="hidden" name="task_id" value="">
+</form>
 </div>
